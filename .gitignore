@@ -1,23 +1,22 @@
-/vendor/
-node_modules/
-npm-debug.log
-yarn-error.log
+/To-do with ui/vendor
+/To-do with ui/.phpunit.cache
+/To-do with ui/node_modules
+/To-do with ui/public/build
+/To-do with ui/public/hot
+/To-do with ui/public/storage
+/To-do with ui/storage/*.key
+/To-do with ui/vendor
+/To-do with ui/.env
+/To-do with ui/.env.backup
+/To-do with ui/.env.production
+/To-do with ui/.phpunit.result.cache
+/To-do with ui/Homestead.json
+/To-do with ui/Homestead.yaml
+/To-do with ui/auth.json
+/To-do with ui/npm-debug.log
+/To-do with ui/yarn-error.log
+/To-do with ui/.fleet
+/To-do with ui/.idea
+/To-do with ui/.vscode
 
-# Laravel 4 specific
-bootstrap/compiled.php
-app/storage/
 
-# Laravel 5 & Lumen specific
-public/storage
-public/hot
-
-# Laravel 5 & Lumen specific with changed public path
-public_html/storage
-public_html/hot
-
-storage/*.key
-.env
-Homestead.yaml
-Homestead.json
-/.vagrant
-.phpunit.result.cache
