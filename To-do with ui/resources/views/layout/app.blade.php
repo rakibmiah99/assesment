@@ -17,7 +17,7 @@
 <!-- beautify ignore:start -->
 <html
     lang="en"
-    class="light-style layout-menu-fixed"
+    class="light-style layout-menu"
     dir="ltr"
     data-theme="theme-default"
     data-template="vertical-menu-template-free"
@@ -65,6 +65,29 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{asset('assets/js/config.js')}}"></script>
+    <style>
+        .pagination svg{
+            height: 25px;
+        }
+
+        .pagination nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .pagination nav div.flex:nth-child(1){
+            display: none;
+        }
+        .pagination nav div:nth-child(2){
+            display: flex;
+            justify-content: end;
+            width: 100% !important;
+            align-items: end;
+        }
+    </style>
 </head>
 
 <body>
@@ -72,8 +95,6 @@
 <div class="layout-wrapper layout-content-navbar">
     <div class="layout-container">
 
-
-        @include('layout.sidebar')
         <!-- Layout container -->
         <div class="layout-page">
 
@@ -81,7 +102,6 @@
             <!-- Content wrapper -->
             <div class="content-wrapper">
                 @yield('main-content')
-                @include('layout.footer')
                 <div class="content-backdrop fade"></div>
             </div>
             <!-- Content wrapper -->

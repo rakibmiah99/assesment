@@ -12,6 +12,7 @@ use Illuminate\Testing\Fluent\Concerns\Has;
 class AuthController extends Controller
 {
     public function LoginPage(Request $request){
+
         return view('LoginPage');
     }
 
@@ -65,7 +66,17 @@ class AuthController extends Controller
             ])->withInput();
         }
 
+    }
 
+    function Logout(Request $request): RedirectResponse
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect()->route('login');
     }
 
 
