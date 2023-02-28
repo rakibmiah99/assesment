@@ -72,6 +72,10 @@
             width: 100% !important;
             align-items: end;
         }
+
+        tr:last-child{
+            border-bottom: 2px solid #d6d7d9;
+        }
     </style>
 </head>
 

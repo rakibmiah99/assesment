@@ -24,10 +24,10 @@
                 <a href="{{route('home.create')}}" class="btn btn-primary">Add</a>
             </div>
 
-            <div class="{{--table-responsive--}} text-nowrap">
-                <table class="table">
+            <div class="{{--table-responsive--}} d-flex flex-column justify-content-between text-nowrap" style="min-height: 70vh">
+                <table class="table" >
                     <thead>
-                    <tr>
+                    <tr class="bg-light">
                         <th>Sl</th>
                         <th>Date</th>
                         <th>title</th>
@@ -38,7 +38,7 @@
                     <tbody class="table-border-bottom-0">
 
                     @if(count($lists) > 0)
-                        <?php (\Request::get('page') != "") ? $sl = \Request::get('page') * $number_of_view : $sl =  0?>
+                        <?php (\Request::get('page') != "" && \Request::get('page') > 1) ? $sl = (\Request::get('page') -1) * $number_of_view : $sl =  0?>
                         @foreach($lists as $list)
                             <tr>
                                 <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{++$sl}}</strong></td>
