@@ -31,12 +31,11 @@
                                     name="name"
                                     value="{{old('name')}}"
                                     placeholder="Enter your username"
-                                    autofocus
                                 />
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="text" class="form-control" value="{{old('email')}}" id="email" name="email" placeholder="Enter your email" />
+                                <input type="email" class="form-control" value="{{old('email')}}" id="email" name="email" placeholder="Enter your email" />
                             </div>
                             <div class="mb-3 form-password-toggle">
                                 <label class="form-label" for="password">Password</label>
@@ -53,15 +52,7 @@
                                 </div>
                             </div>
 
-                            <div class="mb-3">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="terms-conditions" name="terms" />
-                                    <label class="form-check-label" for="terms-conditions">
-                                        I agree to
-                                        <a href="javascript:void(0);">privacy policy & terms</a>
-                                    </label>
-                                </div>
-                            </div>
+
                             <button class="btn btn-primary d-grid w-100">Sign up</button>
                         </form>
 
